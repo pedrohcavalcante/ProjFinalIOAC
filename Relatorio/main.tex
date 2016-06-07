@@ -59,8 +59,11 @@
 \tableofcontents
 \chapter{Introdução}
 \section{Daisy Chaining}
+Daisy Chaining é uma topologia utilizada em vários aspectos, como por exemplo o árbitro de barramento ou topologia de rede. Ambos seguem a mesma lógica: o dispositivo solicita execução através do caminho destinado para esse fim (bus-request). Por estarem ligados em série, o árbitro responde à solicitação passando em cada periférico e vendo se ele foi quem solocitou. Caso não seja, passa para o próximo, até encontrar aquele que solicitou. 
 \section{Prioridade}
+A forma de árbitrariedade por prioridade é executada de acordo com a prioridade inerente ao dispositivo que solicitou execução. 
 \section{Justiça}
+Arbritrariedade por tempo de justiça é dada da forma que: cada dispositivo tem seu tempo de execução. Por justiça, o árbitro é implementado com um tempo fixo de execução. Caso o dispositivo leve mais tempo que o árbitro permite, ele é executado, interrompido e passa para o final da linha de execução. Dessa forma, 
 \chapter{Solução e Implementação}
 A solução encontrada para o resolvimento desse projeto foi encontrada, para Daisy Chaining, a execução dos periféricos de acordo com a entrada da solicitação, ou seja, pelo ordem que a requisição vai chegando ao barramento, ela vai ficar na fila e será executada conforme essa ordem. 
 
